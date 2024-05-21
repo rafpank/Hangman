@@ -1,30 +1,14 @@
 #My first project in Python - Game of hangman
 import random
 
-name = str(input("Hi! what's your name? "))
-print(f'Hello {name}.\nWelcom in the game of Hangman.\n')
-      
-countries = [
-    'Francja', 'Australia', 'Brazylia', 'Indie', 'Kanada', 'Niemcy', 'Japonia', 'Włochy', 'Argentyna', 'Hiszpania',
+#main function to 
+def main():
+    countries = [ 
+        "France", "Germany", "Italy", "Spain", "Greece", "Austria", "Hungary", "Poland", "Portugal"
     ]
+    lives = 3
 
-guessing_password = random.choice(countries).upper()
-presented_state = "_ " * len(guessing_password)
-strike = set()
+    answer = input("Do you want to start new game? Y/N ")
 
-print("Guessing : ",presented_state)
 
-lives = 5
-
-while lives > 0:
-    print("You have:", lives, "lives")
-    letter = input("Try to guess letter:").upper()
-    if letter in guessing_password:
-        print("Great shot")   
-        #for i in guessing_password:
-        #    if guessing_password(i) == letter:
-         #       guessing_password = letter
-    else:
-         print("You miss :(") 
-         lives -=1
-    
+main()
