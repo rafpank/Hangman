@@ -1,7 +1,47 @@
 #My first project in Python - Game of hangman
 import random
 
-#main function to 
+def graf(lives):
+    gallows_graf = [
+        """
+    -------
+    |     |
+    |     O
+    |    /|\\
+    |    / \\
+    |     
+    -------
+    """,
+     """
+    -------
+    |     
+    |     O
+    |    /|\\
+    |    / \\
+    |     
+    -------
+    """,
+     """
+    -------
+    |     |
+    |     
+    |    /|\\
+    |    / \\
+    |    
+    -------
+    """,
+     """
+    -------
+    |     |
+    |     
+    |    
+    |    
+    |     
+    -------
+    """
+    ]
+    return gallows_graf[lives]
+
 def main():
     countries = [ 
         "France", "Germany", "Italy", "Spain", "Greece", "Austria", "Hungary", "Poland", "Portugal"
