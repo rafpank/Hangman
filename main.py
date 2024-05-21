@@ -77,11 +77,20 @@ def main():
     countries = [ 
         "France", "Germany", "Italy", "Spain", "Greece", "Austria", "Hungary", "Poland", "Portugal"
     ]
+    capitals = [
+        "Paris", "Berlin", "Rome", "Madrid", "London",  
+        "Budapest", "Warsaw", "Prague", "Stockholm",
+        "Oslo", "Dublin", "Copenhagen", 
+    ]
     lives = 3
 
     answer = input("Do you want to start new game? Y/N ")
     while answer.lower() == "y":
-        game(countries, lives)
+        category = input("Do you prefer to guess the name of the capital or the country? \n 1 - capital \n 2 - coutry: ")
+        if category == '2':
+            game(countries, lives)
+        else:
+            game(capitals, lives)
         answer = input("Do you want to start new game? Y/N ")
 
 
